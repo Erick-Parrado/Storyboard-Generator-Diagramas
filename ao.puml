@@ -10,8 +10,11 @@ class User{
     age
     rol
     ---
-    iniciarSesion()
-    registrarse()
+    login()
+    register()
+    recoverPassword()
+    accessAProject()
+    watchOtherProfiles()
     
 }
 
@@ -23,6 +26,19 @@ class Project{
     finishDate
     tittle
     description
+    ---
+    createProject()
+    assignDirectorRole()
+    generateAccessPIN()
+    updateAccessPIN()
+    manageRoles()
+    editProjectInfo()
+    deleteProject()
+    deleteMembers()
+    notifyChanges()
+    watchLastDate()
+    DownloadPDF()
+    defineNumbreOfPages()
 }
 class Scene{
     id
@@ -32,6 +48,11 @@ class Scene{
     dayTime
     space
     projectId
+    ---
+    createScene()
+    editEsceneInfo()
+    delteEscenes()
+    watchAddedEscenes()
 }
 class Plane{
     id
@@ -43,6 +64,13 @@ class Plane{
     move
     projectId
     sceneId
+    ---
+    createPlane()
+    editPlaneInfo()
+    deletePlane()
+    watchAddedPlanes()
+    addImageFromCamera()
+    addImageFromStorage()
 }
 
 @enduml
