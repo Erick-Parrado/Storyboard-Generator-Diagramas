@@ -1,0 +1,9 @@
+@startuml fronteras_solucion
+    actor Director as Dr
+    actor Guionistas as Gn
+    actor Colaborador as Cl
+    actor Usuario as Us
+
+rectangle StoryboardGenerator-Usuario{
+
+}

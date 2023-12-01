@@ -1,0 +1,33 @@
+@startuml StoryboarGenerator-CDS
+
+    left to right direction
+    skinparam packageStyle rectangle
+
+    actor Director as Dr
+    actor Guionistas as Gn
+    actor Colaborador as Cl
+    actor User as Us
+
+    rectangle StoryboardGenerator-Escenas{
+        usecase "RF04 Acceder a un proyecto" as RF04
+        usecase "RF25 Crear escenas" as RF25
+        usecase "RF26 Modificar la información de las escenas" as RF26
+        usecase "RF27 Eliminar escenas" as RF27
+        usecase "RF28 Visualizar escenas agregadas" as RF28
+    }
+
+
+    Dr <|-down- Us
+    Gn <|-down- Us
+    Cl <|-down- Us
+    Gn -- RF25
+    Gn -- RF26
+    Gn -- RF27
+    Us -- RF28
+
+    RF25 ..> RF04:include
+    RF26 ..> RF04:include
+    RF27 ..> RF04:include
+    RF28 ..> RF04:include
+
+@enduml

@@ -1,0 +1,48 @@
+@startuml StoryboarGenerator-AO
+
+class User{
+    id
+    name
+    lastName
+    email
+    password
+    phone
+    age
+    rol
+    ---
+    iniciarSesion()
+    registrarse()
+    
+}
+
+class Project{
+    id
+    producer
+    startDate
+    updateDate
+    finishDate
+    tittle
+    description
+}
+class Scene{
+    id
+    number
+    duration
+    place
+    dayTime
+    space
+    projectId
+}
+class Plane{
+    id
+    number
+    duration
+    argument
+    shot
+    framing
+    move
+    projectId
+    sceneId
+}
+
+@enduml

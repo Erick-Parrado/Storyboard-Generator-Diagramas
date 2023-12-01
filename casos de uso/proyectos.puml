@@ -1,0 +1,53 @@
+@startuml StoryboarGenerator-CDS
+
+    left to right direction
+    skinparam packageStyle rectangle
+
+    actor Director as Dr
+    actor Guionistas as Gn
+    actor Colaborador as Cl
+    actor Usuario as Us
+    actor Sistema as Ss
+
+    rectangle StoryboardGenerator-Proyecto{
+        usecase "RF04 Acceder a un proyecto" as RF04
+        usecase "RF06 Visualizar otros perfiles" as RF06
+        usecase "RF07 Crear un proyecto" as RF07
+        usecase "RF08 Asignar rol de director" as RF08
+        usecase "RF09 Crear código de acceso para proyecto" as RF09
+        usecase "RF10 Actualizar PIN de acceso" as RF10
+        usecase "RF11 Administrar roles del equipo" as RF11
+        usecase "RF12 Modificar información del proyecto" as RF12
+        usecase "RF13 Eliminar proyecto" as RF13
+        usecase "RF14 Eliminar miembros del equipo" as RF14
+        usecase "RF15 Notificar cambios" as RF15
+        usecase "RF16 Visualizar última fecha de modificación" as RF16
+        usecase "RF17 Descargar en pdf el storyboard" as RF17
+        usecase "RF18 Definir número de escenas para generar pdf" as RF18
+    }
+
+    Us -- RF06
+    Us -- RF07
+    'Ss -- RF08
+    'Ss -- RF09
+    Dr -- RF10
+    Dr -- RF11
+    Dr -- RF12
+    Dr -- RF13
+    Dr -- RF14
+    Dr <|-down- Us
+    Gn <|-down- Us
+    Cl <|-down- Us
+    Ss -- RF15
+    Us -- RF16
+    Us -- RF17
+    
+    
+    RF07 <.down. RF08:include
+    RF07 <.down. RF09:include
+    RF17 <.. RF18:extend
+    RF06 ..> RF04:include
+    RF16 ..> RF04:include
+    RF17 ..> RF04:include
+
+@enduml

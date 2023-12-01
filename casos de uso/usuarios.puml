@@ -1,0 +1,34 @@
+@startuml StoryboarGenerator-CDS
+
+    left to right direction
+    skinparam packageStyle rectangle
+
+    actor Director as Dr
+    actor Guionistas as Gn
+    actor Colaborador as Cl
+    actor Usuario as Us
+
+    rectangle StoryboardGenerator-Usuarios{
+        usecase "RF01 Registrar usuario" as RF01
+        usecase "RF02 Iniciar sesión" as RF02
+        usecase "RF03 Recuperar contraseña" as RF03
+        usecase "RF04 Acceder a un proyecto" as RF04
+        usecase "RF05 Editar información personal" as RF05
+    }
+
+    Dr <|-down- Us
+    Gn <|-down- Us
+    Cl <|-down- Us
+
+    Us -- RF01 
+    Us -- RF03 
+    Us -- RF04 
+    Us -- RF05 
+
+    RF02 <.up. RF01:include
+    RF01 <.right. RF03:include
+    RF02 <.up. RF04:include
+    RF02 <.up. RF05:include
+
+
+@enduml

@@ -1,0 +1,29 @@
+
+        usecase "RF01 Registrar usuario" as RF01
+        usecase "RF02 Iniciar sesión" as RF02
+        usecase "RF03 Recuperar contraseña" as RF03
+        usecase "RF04 Acceder a un proyecto" as RF04
+        usecase "RF05 Editar información personal" as RF05
+        usecase "RF06 Visualizar otros perfiles" as RF06
+        usecase "RF07 Crear un proyecto" as RF07
+        usecase "RF08 Asignar rol de director al crear un proyecto" as RF08
+        usecase "RF09 Crear código de acceso para proyecto" as RF09
+        usecase "RF10 Actualizar PIN de acceso" as RF10
+        usecase "RF11 Administrar roles del equipo" as RF11
+        usecase "RF12 Modificar información del proyecto" as RF12
+        usecase "RF13 Eliminar proyecto" as RF13
+        usecase "RF14 Eliminar miembros del equipo" as RF14
+        usecase "RF15 Notificar cambios" as RF15
+        usecase "RF16 Visualizar última fecha de modificación" as RF16
+        usecase "RF17 Descargar en pdf el storyboard" as RF17
+        usecase "RF18 Definir número de escenas para generar pdf" as RF18
+        usecase "RF19 Crear planos" as RF19
+        usecase "RF20 Modificar la información de los planos" as RF20
+        usecase "RF21 Eliminar planos" as RF21
+        usecase "RF22 Visualizar planos agregados" as RF22
+        usecase "RF23 Asignar imagen desde la camara" as RF23
+        usecase "RF24 Asignar imagen desde el almacenamiento interno" as RF24
+        usecase "RF25 Crear escenas" as RF25
+        usecase "RF26 Modificar la información de las escenas" as RF26
+        usecase "RF27 Eliminar escenas" as RF27
+        usecase "RF28 Visualizar escenas agregadas" as RF28
