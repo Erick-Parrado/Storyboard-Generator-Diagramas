@@ -14,6 +14,7 @@ class User{
     login()
     register()
     recoverPassword()
+    editProfile()
 }
 
 class TeamMember{
@@ -31,17 +32,22 @@ class Project{
     finishDate
     tittle
     description
+    teamMembers
+    scenes
     ---
     createProject()
     generateAccessPIN()
-    manageRoles()
     editProject()
-    deleteMembers()
+    manageMemberRol()
+    deleteMember()
     notifyChanges()
     showLastUpdateDate()
     downloadPDF()
     deleteProject()
     accessProject()
+    addScenes()
+    deleteScenes()
+    showAddedEscenes()
 }
 class Scene{
     id
@@ -50,12 +56,15 @@ class Scene{
     place
     dayTime
     space
-    projectId
+    planes
     ---
     createScene()
     editEscene()
-    delteEscenes()
-    showEscenes()
+    deleteEscene()
+    showEscene()
+    addPlanes()
+    deletePlanes()
+    showAddedPlanes()
 }
 class Plane{
     id
@@ -65,12 +74,9 @@ class Plane{
     shot
     framing
     move
-    projectId
-    sceneId
     ---
     createPlane()
     editPlane()
-    deletePlane()
     showPlane()
     addImageFromCamera()
     addImageFromStorage()

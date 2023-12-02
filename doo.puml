@@ -1,0 +1,139 @@
+@startuml StoryboarGenerator-DOO
+
+class User{
+    #id:int
+    #name:string
+    #lastName:string
+    #email:string
+    #password:string
+    #phone:string
+    #age:int
+    -idetifier:string
+    -key:string
+    ---
+    +User(string,string,string,string,string,int);
+    {static}+login(string,string):
+    {static}+register(string,string,string,string,string,int):
+    {static}+recoverPassword():
+    +getId():string
+    +getName():string
+    +getLastName():string
+    +getEmail():string
+    +getPassword():string
+    +getPhone():string
+    +getAge():int
+    +setName(string):void
+    +setLastName(string):void
+    +setEmail(string):void
+    +setPassword(string):void
+    +setPhone(string):void
+    +setAge(int):void
+    +accessProject(int):bool
+}
+
+class TeamMember{
+    -rol:string
+    -projectId:int
+    ---
+    +TeamMember(int,string,string,string,string,string,string,int)
+    +getRol():string
+    +setRol(id):void   
+    +getProjectId():int
+}
+
+class Project{
+    -id:string
+    -tittle:string
+    -description:string
+    -pin:string
+    -producer:string
+    -startDate:DateTime
+    -updateDate:DateTime
+    -finishDate:DateTime
+    -teamMembers:ArrayList<TeamMember>
+    -scenes:ArrayList<Scenes>
+    ---
+    +Project(string,string,string,string)
+    +Project(string,string,string,string,string)
+    +getId():id
+    +getTittle():string
+    +getDescription():string
+    +getPIN():string
+    +getProducer():string
+    +getStartDate():DateTime
+    +getUpdateDate():DateTime
+    +getFinishDate():DateTime
+    +getTeamMembers():ArrayList<TeamMember>
+    +getScenes():ArrayList<Scene>
+    +setTittle(string):void
+    +setDescription(string):void
+    +setProducer(string):void
+    +setStartDate(DateTime):void
+    +setUpdateDate(DateTime):void
+    +setFinishDate(DateTime):void
+    +addScene(Scene):void
+    +senerateAccessPIN():void
+    +deleteMember(int):void
+    +changeMemberRol(int,int):void
+    +notifyChanges():void
+    +downloadPDF():void
+    +deleteProject():void
+    +deleteEscene():void
+    -scenesCoutn():int
+}
+class Scene{
+    -id:int
+    -number:int
+    -duration:string
+    -place:string
+    -dayTime:string
+    -space:string
+    -planes:ArrayList<Plane>
+    ---
+    +Scene(string,string,string,string)
+    +getId():int
+    +getNumber():int
+    +getDuration():string
+    +getPlace():string
+    +getDayTime():string
+    +getSpace():string
+    +getPlanes():ArrayList<Plane>
+    +setNumber(int):void
+    +setDuration(int):void
+    +setPlace(stirng):void
+    +setDayTime(id):void
+    +setSpace(id):void
+    +addPlane(Plane):void
+    +deletePlane():void
+}
+class Plane{
+    -id:int
+    -number:int
+    -duration:int
+    -argument:string
+    -shot:string
+    -framing:string
+    -move:string
+    -image:string
+    ---
+    +Plane(int,string,string,string,string)
+    +number:int
+    +getDuration():int
+    +getArgument():string
+    +getShot():string
+    +getFraming():string
+    +getMove():string
+    +setDuration(int):void
+    +setArgument(string):void
+    +setShot(string):void
+    +setFraming(string):void
+    +setMove(string):void
+    +addImageFromCamera(string):void
+    +addImageFromStorage(string):void
+}
+User<|-left-TeamMember
+TeamMember -up-o Project
+Project*-right-Scene
+Scene*-right-Plane
+
+@enduml
