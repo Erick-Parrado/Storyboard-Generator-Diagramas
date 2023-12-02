@@ -35,9 +35,9 @@
     Dr -- RF12
     Dr -- RF13
     Dr -- RF14
-    Dr <|-down- Us
-    Gn <|-down- Us
-    Cl <|-down- Us
+    Dr -down-|> Us
+    Gn -down-|> Us
+    Cl -down-|> Us
     Ss -- RF15
     Us -- RF16
     Us -- RF17

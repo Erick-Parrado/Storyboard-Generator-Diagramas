@@ -16,9 +16,9 @@
         usecase "RF05 Editar información personal" as RF05
     }
 
-    Dr <|-down- Us
-    Gn <|-down- Us
-    Cl <|-down- Us
+    Dr -down-|> Us
+    Gn -down-|> Us
+    Cl -down-|> Us
 
     Us -- RF01 
     Us -- RF03 

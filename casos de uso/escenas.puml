@@ -17,9 +17,9 @@
     }
 
 
-    Dr <|-down- Us
-    Gn <|-down- Us
-    Cl <|-down- Us
+    Dr -down-|> Us
+    Gn -down-|> Us
+    Cl -down-|> Us
     Gn -- RF25
     Gn -- RF26
     Gn -- RF27

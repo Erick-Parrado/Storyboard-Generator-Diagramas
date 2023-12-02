@@ -9,7 +9,7 @@
     actor User as Us
 
     rectangle StoryboardGenerator-Planos{
-        usecase "RF04 Acceder a un proyecto" as RF04
+        usecase "RF25 Crear escenas" as RF25
         usecase "RF19 Crear planos" as RF19
         usecase "RF20 Modificar la información de los planos" as RF20
         usecase "RF21 Eliminar planos" as RF21
@@ -18,18 +18,18 @@
         usecase "RF24 Asignar imagen desde el almacenamiento interno" as RF24
     }
 
-    Dr <|-down- Us
-    Gn <|-down- Us
-    Cl <|-down- Us
+    Dr -down-|> Us
+    Gn -down-|> Us
+    Cl -down-|> Us
     Gn -- RF19
     Gn -- RF20
     Gn -- RF21
     Us -- RF22
 
-    RF19 ..> RF04:include
-    RF20 ..> RF04:include
-    RF21 ..> RF04:include
-    RF22 ..> RF04:include
+    RF19 ..> RF25:include
+    RF20 ..> RF25:include
+    RF21 ..> RF25:include
+    RF22 ..> RF25:include
     RF23 .up.> RF20:extend
     RF24 .up.> RF20:extend
 
