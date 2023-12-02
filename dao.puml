@@ -1,0 +1,84 @@
+@startuml StoryboarGenerator-DAO
+
+class User{
+    id
+    name
+    lastName
+    email
+    password
+    phone
+    age
+    idetifier
+    key
+    ---
+    login()
+    register()
+    recoverPassword()
+}
+
+class TeamMember{
+    id
+    rol
+    ---
+    showProfile()
+}
+
+class Project{
+    id
+    producer
+    startDate
+    updateDate
+    finishDate
+    tittle
+    description
+    ---
+    createProject()
+    generateAccessPIN()
+    manageRoles()
+    editProject()
+    deleteMembers()
+    notifyChanges()
+    showLastUpdateDate()
+    downloadPDF()
+    deleteProject()
+    accessProject()
+}
+class Scene{
+    id
+    number
+    duration
+    place
+    dayTime
+    space
+    projectId
+    ---
+    createScene()
+    editEscene()
+    delteEscenes()
+    showEscenes()
+}
+class Plane{
+    id
+    number
+    duration
+    argument
+    shot
+    framing
+    move
+    projectId
+    sceneId
+    ---
+    createPlane()
+    editPlane()
+    deletePlane()
+    showPlane()
+    addImageFromCamera()
+    addImageFromStorage()
+}
+
+User<|-left-TeamMember
+TeamMember -up-o Project
+Project*-right-Scene
+Scene*-right-Plane
+
+@enduml
